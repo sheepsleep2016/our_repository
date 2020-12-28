@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+  <meta charset = "UTF-8">
+  <link rel = "stylesheet" href = "../../static/css/base.css">
+  <link rel = "stylesheet" href = "../static/css/shop_web_11.css">
+  <script src = "/static/js/jquery-1.11.3.js"></script>
+  <script src = "/static/js/index_o1.js"></script>
+  <title>商品页</title>
+</head>
+<body>
+<table class = tr1 width = "990"  border = "0">
+  <tr>
+    <td width = "96">商户姓名</td>
+    <td width = "106">上架时间</td>
+    <td width = "107">咸鱼</td>
+    <td width = "470">&nbsp;</td>
+  </tr>
+</table>
+<div id = "box">
+  <p>
+  <div id = "banner" align = "center">
+    <p style="display: none" id="path">{{ dict_shopping.path_photo }}</p>
+    <img src = "/static/upload/picture/20190518105146_1.jpg">
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+    <a href = "javascript:void(0)" class = "left"></a>
+    <a href = "javascript:void(0)" class = "right"></a>
+  </div>
+  <div class = "main_01">
+    <p class = "shop_name">商品名称</p>
+    <span class = "shop_price">价格:</span><span class = "shop_price_01">&yen30</span>
+    <p><span class = "shop_address">所在地：</span><span class = "shop_address_01">湖北武汉</span></p>
+    <p><span class = "shop_address">联系方式：</span><span class = "shop_address_01">10086</span></p>
+    <form name = "form1" method = "post" action = "">
+      <input type = "submit" name = "dainji_shop" id = "dainji_shop" value = "点击购买">
+    </form>
+    <form name = "form2" method = "post" action = "">
+      <input type = "submit" name = "dianzan" id = "dianzan" value = "点赞">
+    </form>
+    <p>&nbsp;</p>
+    </p>
+  </div>
+</div>
+</body>

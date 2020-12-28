@@ -1,0 +1,235 @@
+
+
+.common_title {
+  width: 1200px;
+  margin: 20px auto 0;
+  font-size: 25px;
+}
+
+.common_list_con {
+  width: 1200px;
+  border: 1px solid #dddddd;
+  border-top: 2px solid #00bc6f;
+  margin: 10px auto 0;
+  background-color: #f7f7f7;
+  position: relative;
+}
+
+.common_list_con dl {
+  margin: 20px;
+}
+
+.common_list_con dt {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px
+}
+
+.common_list_con dd input {
+
+  outline: none;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  border-radius: 4px;
+  vertical-align: bottom;
+  margin-right: 10px
+}
+
+.common_list_con dd .tipText {
+  font-size: 16px;
+  display: none;
+}
+
+.common_list_con dd .tooltip {
+  width: 200px;
+  display: inline-block;
+  visibility: hidden;
+  color: red;
+}
+
+.pay_style_con {
+  margin: 20px;
+}
+
+.pay_style_con input {
+  float: left;
+  margin: 14px 7px 0 0;
+}
+
+.pay_style_con label {
+  float: left;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  padding: 8px 8px 8px 40px;
+  margin-right: 25px
+}
+
+.pay_style_con .cash {
+  background: url(/static/image/pay_icons.png) 6px 6px no-repeat #fff;
+}
+
+.pay_style_con .weixin {
+  background: url(/static/image/pay_icons.png) 6px -30px no-repeat #fff;
+}
+
+.pay_style_con .zhifubao {
+  background: url(/static/image/pay_icons.png) 28px -68px no-repeat #fff;
+  width: 88px;
+  height: 30px
+}
+
+.pay_style_con .bank {
+  background: url(/static/image/pay_icons.png) 3px -105px no-repeat #fff;
+
+}
+
+.settle_con {
+  margin: 10px
+}
+
+.total_goods_count, .transit, .total_pay {
+  line-height: 24px;
+  text-align: right
+}
+
+.total_goods_count span{
+  font-size: 14px;
+  color: #ff4200;
+  padding: 0 5px;
+}
+
+.order_submit {
+  width: 1200px;
+  margin: 5px auto;
+}
+
+.order_submit a {
+  width: 160px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background-color: #47aa34;
+  color: #fff;
+  font-size: 16px;
+  display: block;
+  float: right;
+  margin-bottom: 10px;
+  margin-right: 30px;
+}
+
+.goods_list_th {
+  height: 40px;
+  border-bottom: 1px solid #ccc
+}
+
+.goods_list_th li {
+  float: left;
+  line-height: 40px;
+  text-align: center;
+}
+
+.goods_list_th .goods_name {
+  width: 46%
+}
+
+.goods_list_th .goods_price {
+  width: 12%
+}
+
+.goods_list_th .goods_count {
+  width: 12%
+}
+
+.goods_list_th .goods_sum {
+  width: 15%
+}
+
+.goods_list_th .goods_action {
+  width: 15%
+}
+
+.goods_list_td {
+  height: 120px;
+  border-bottom: 1px solid #eeeded
+}
+
+.goods_list_td li {
+  float: left;
+  line-height: 120px;
+  text-align: center;
+}
+
+.goods_list_td .col01 {
+  width: 4%
+}
+
+.goods_list_td .col02{
+  width: 8%
+}
+
+.goods_list_td .goods_name {
+  width: 34%
+}
+
+.goods_list_td .goods_price {
+  width: 12%
+}
+
+.goods_list_td .goods_count {
+  width: 12%
+}
+
+.goods_list_td .goods_sum {
+  width: 15%
+}
+
+.goods_list_td .goods_action {
+  width: 15%
+}
+
+.goods_list_td .col02 {
+  text-align: right
+}
+
+.goods_list_td .col02 img {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #ddd;
+  display: block;
+  margin: 7px 0;
+  float: right;
+}
+
+.goods_list_td .goods_name {
+  display: inline-block;
+  margin: auto 0;
+  text-align: left;
+  line-height: 40px;
+}
+
+.goods_list_td .goods_count a{
+    border: 1px solid gray;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    float: left;
+    background-color: #e8e8e8;
+    margin-top: 46px;
+
+}
+
+.goods_list_td .goods_count input {
+    margin-top: 46px;
+    float: left;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    border: none;
+    border-top:1px solid gray;
+	border-bottom:1px solid gray;
+    padding: 0;
+    text-align: center;
+}
+
+

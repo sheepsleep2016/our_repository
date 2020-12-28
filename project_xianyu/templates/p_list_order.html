@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+  <meta charset = "UTF-8">
+  <title>历史订单</title>
+  <link rel = "stylesheet" href = "/static/css/list_order.css">
+  <link rel = "stylesheet" href = "/static/css/index.css" type = "text/css">
+  <link rel = "shortcut icon" href = "/static/image/图标.png">
+  <script src = "/static/js/common.js"></script>
+  <script src = "/static/jquery/jquery-3.1.1.min.js"></script>
+  <script src = "/static/jquery/jquery.cookie.js"></script>
+</head>
+<body style="background-image:url('/static/image/big_exchange.jpg');
+background-size: cover;" >
+<div id = "container">
+  <div id = "title">
+    {% if key %}
+    <ul>
+      <li><a href = "/">欢乐GO首页</a></li>
+      <li><span>Hi，</span></li>
+      <li style="margin: 0" class = "last_line"><a href = "/personal">{{ user_name }}</a></li>
+      <li class = "last_line"><a href = "/loginout" >退出</a></li>
+    </ul>
+    <ul style="float: right;margin-right: 50px">
+      <li style="margin-left: 550px"><a href = "/personal">个人中心</a></li>
+      <li ><a href = "/putaway">闲置甩卖</a></li>
+    </ul>
+      {% else %}
+    <ul>
+      <li><a href = "/">欢乐GO首页</a></li>
+      <li><a href = "/login">请登录</a></li>
+      <li class = "last_line"><a href = "/register">免费注册</a></li>
+    </ul>
+    <ul style="float: right;margin-right: 50px">
+      <li style="margin-left: 550px"><a href = "/login">个人中心</a></li>
+      <li><a href = "/login">闲置甩卖</a></li>
+    </ul>
+    {% endif %}
+  </div>
+  <div id = "nav" style = "  padding-top: 8px;">
+    <div class = "form_nav_line">
+      <span style = "font: 40px '楷体	KaiTi'"><a href = "">个人中心</a></span>
+    </div>
+  </div>
+</div>
+<div id = "mymessage">
+  <div id = "nav">
+    <div class = "headpor">
+      <img src = "/static/image/grxx.png">
+    </div>
+    <div>
+      <ul>
+        <li><a href = "/personal">个人信息</a></li>
+      </ul>
+      <ul>
+        <li><a href = "/personal/changepwd">修改密码</a></li>
+      </ul>
+      <ul>
+        <li><a href = "/mythings">我的闲置</a></li>
+      </ul>
+      <ul>
+        <li><a href = "/order_list">历史订单</a></li>
+      </ul>
+    </div>
+  </div>
+  <div id = "hist_order">
+    <h1>历史订单</h1>
+    <!--历史订单标题-->
+    <div class = "order_title">
+      <p class = "gname">商品</p>
+      <p class = "gprice">单价</p>
+      <p class = "gcount">数量</p>
+      <p class = "gsum">金额</p>
+      <p class = "gsolder">卖家</p>
+      <p class = "gplace">发出地-->送达地</p>
+    </div>
+    {% for comm in list_order %}
+    <div class = "content">
+      <!--订单信息-->
+      <div class = "order_message">
+        <p>订单日期：
+          <span>{{ comm.date }}</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <span>订单号:{{ comm.id }}</span>
+        </p>
+      </div>
+      <!--历史订单商品显示-->
+      <div class = "order_item">
+        <p class = "gname">
+          <img src = "{{ comm.photo.0 }}">
+          <span>{{ comm.name }}</span>
+        </p>
+        <p class = "gprice">
+          <span>{{ comm.price }}</span>
+        </p>
+        <p class = "gcount">
+          <span>{{ comm.count }}</span>
+        </p>
+        <p class = "gsum">
+          <span>{{ comm.totalprice }}</span>
+        </p>
+        <p class = "gsolder">
+          用户名：
+          <span>{{ comm.solder_name }}</span>
+          <br>
+          手机号：
+          <br>
+          <span>{{ comm.solder_phone }}</span>
+        </p>
+        <p class = "gplace">
+          <span>{{ comm.position_send }}</span>
+          <br>---->
+          <br>
+          <span>{{ comm.position_recv }}</span>
+        </p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+</body>
+</html>

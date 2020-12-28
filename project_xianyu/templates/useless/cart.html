@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+{#  <link rel="stylesheet" href="../../static/css/base.css">#}
+  <link rel="stylesheet" href="../../static/css/bootstrap.min.css">
+{#  <script src="../../static/js/jquery-1.11.3.js"></script>#}
+  <script src="../../static/js/cart.js"></script>
+</head>
+<body>
+<div class="orderwrap">
+	<div class="ordertouch clearfix">
+		<div class="ordercont">
+			<div class="orderitem clearfix" priceOne>
+				<div class="col-xs-1 clearPadding"></div>
+				<div class="col-xs-3 clearPadding">
+					<a href="">
+						<img src="" alt="" class="img-responsive">
+					</a>
+				</div>
+				<div class="col-xs-7 clearPadding pl10">
+					<div class="proname"><a href="">原味手剥大瓜子</a></div>
+					<div class="prodetail">
+						<span class="font14 color-orange">￥<strong class="unitprice" unitprice>9.9</strong></span>
+						<span class="pro_oriprice"><del>19.9</del></span>
+						<span class="color82 font12">库存：100</span>
+					</div>
+					<div class="pronum">
+						<div class="pull-left input-group">
+							<div class="num">数量：</div>
+							<div class="btn-add omin" onclick="minus(this,'9.9','100');" style="padding:2px 8px;">
+								<span class="glyphicon glyphicon-minus"></span>
+							</div>
+							<input type="text" class="btn-num onum" value="" name='count' onblur='amount_input(this,"9.9","100")' >
+							<div class="btn-add oplus" onclick="plus(this,'9.9}','100}');" style="padding:2px 8px;">
+								<span class="glyphicon glyphicon-plus"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-1 clearPadding"></div>
+				<i class="iconfont o-label op-label checkitem" productid='}'></i>
+				<a href=""><div class="o-more"></div></a>
+			</div>
+		</div>
+		<div class="btn-del" onclick="btndel('',this)">删 除</div>
+	</div>
+</div>
+<div class="bottoms checkoutbox">
+	<div class="col-xs-8  bordertop borderbottom">
+		<div class="pull-left">
+			<i class="o-label checkall iconfont" id="checkall"></i>
+			<span class="qxposition">全选</span>
+		</div>
+		<div class="pull-right">
+			<div class="">合计： ￥ <span class="font14 color-orange allprice" id="allprice">0</span></div>
+			<div class="font12">不含运费</div>
+		</div>
+	</div>
+	<div class="col-xs-4 clearPadding"><button class="btn-checkout" onclick="sbm();">结算（<span class="allnum" id="amount">0</span>）</button></div>
+</div>
+</body>
+</html>

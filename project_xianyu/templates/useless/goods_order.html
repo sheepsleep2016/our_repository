@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+  <meta charset = "UTF-8">
+  <title>商品订单</title>
+  <link rel = "stylesheet" href = "/static/css/goods_order.css">
+  <script src="/static/js/common.js"></script>
+  <script src="/static/jquery/jquery-3.1.1.min.js"></script>
+  <script src="../../static/jquery/jquery.cookie.js"></script>
+  <script src = "/static/js/jquery-1.11.3.js"></script>
+  <script src = "/static/js/goods_order.js"></script>
+</head>
+<body>
+<div id = "goods_order">
+  <div class = "goods_title">
+    <h2>
+      商品下单
+      <p>
+        选择<span class = "total_num">0</span>件商品
+        总共<span class = "total_price">0元</span>
+      </p>
+    </h2>
+  </div>
+  <div class = "goods_nav">
+    <p class = "check">
+      <img src = "/static/image/product_normal.png" class = "checkAll">全选
+    </p>
+    <p class = "goods_name">商品</p>
+    <p class = "goods_price">单价</p>
+    <p class = "goods_count">数量</p>
+    <p class = "goods_sum">金额</p>
+    <p class = "goods_action">操作</p>
+  </div>
+  <div class = "goods_content">
+    <div class = "goods_items">
+      <p class = "check">
+        <img src = "/static/image/product_normal.png" class = "checkImg">
+      </p>
+      <p class = "goods_name">
+        <img src = "{{ photo }}">
+        <span>{{ comm_name }}</span>
+        <span style = "font-size: 16px;">{{ comm_position }}</span>
+      </p>
+      <p class = "goods_price">
+        <span>&yen{{ comm_price }}</span>
+      </p>
+      <p class = "goods_count">
+        <a href = "javascript:void(0)" class = "minus">-</a>
+        <input type = "text" value = "1">
+        <a href = "javascript:void(0)" class = "add">+</a>
+        <b id = "maxcount" style="display: none">{{ count }}</b>
+      </p>
+      <p class = "goods_sum">
+        <b>&yen{{ comm_price }}</b>
+      </p>
+      <p class = "goods_sum" style="border-right:none ">
+      <a href = "/{{ id }}" >放弃订单</a>
+      </p>
+      <!--               <p class="goods_action"></p>  -->
+    </div>
+  </div>
+  <div class = "goods_tools">
+    <p>
+      选择<span class = "total_num">0</span>件商品
+      总共<span class = "total_price">0元</span>
+    </p>
+    <button>
+      <a href = "/paying" target = "_blank">结算</a>
+    </button>
+  </div>
+</div>
+</body>
+</html>
+
+

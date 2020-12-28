@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>团队介绍</title>
+  <link rel = "stylesheet" href = "../static/css/index.css" type = "text/css">
+  <link rel = "shortcut icon" href = "../static/image/图标.png">
+  <meta charset = "utf-8">
+  <script src = "/static/js/common.js"></script>
+  <script src = "/static/jquery/jquery-3.1.1.min.js"></script>
+  <script src = "../static/jquery/jquery.cookie.js"></script>
+  <style type = "text/css">
+        .c2 {
+            /* color: orange;
+            background: cyan; */
+            height: 400px;
+            background-image: url(../static/image/5.jpg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            /* margin:  */
+        }
+
+        .c3 {
+            width: 200px;
+            height: 200PX;
+            background-color: rgb(182, 168, 63);
+            float: left;
+        }
+
+        .c4 {
+            height: 100%;
+            background-color: rgb(252, 233, 208);
+            margin: 10px 0;
+            /* float:left; */
+        }
+
+        #d1 {
+
+            margin: 0 auto;
+        }
+
+        #d2 {
+          height: 100%;
+          margin: 20px 0;
+          padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+<div id = "container">
+  <div id = "title">
+    {% if key %}
+    <ul>
+      <li><a href = "/">欢乐GO首页</a></li>
+      <li><span>Hi，</span></li>
+      <li style="margin: 0" class = "last_line"><a href = "/personal">{{ user_name }}</a></li>
+      <li class = "last_line"><a href = "/loginout" >退出</a></li>
+    </ul>
+    <ul style="float: right;margin-right: 50px">
+      <li style="margin-left: 550px"><a href = "/personal">个人中心</a></li>
+      <li ><a href = "/putaway">闲置甩卖</a></li>
+    </ul>
+      {% else %}
+    <ul>
+      <li><a href = "/">欢乐GO首页</a></li>
+      <li><a href = "/login">请登录</a></li>
+      <li class = "last_line"><a href = "/register">免费注册</a></li>
+    </ul>
+    <ul style="float: right;margin-right: 50px">
+      <li style="margin-left: 550px"><a href = "/login">个人中心</a></li>
+      <li><a href = "/login">闲置甩卖</a></li>
+    </ul>
+    {% endif %}
+  </div>
+  <div id = "d1">
+    <div class = "c2"></div>
+    <h1>制作团队介绍:</h1>
+    <div id = "d2">
+        <img class = "c3" src = "../static/image/8.png" alt = ""  title = "人物1">
+        <p class = "c4">
+            目前发现的问题是一个时间不准的问题：
+            有一个字段的定义如下：
+            created = models.DateTimeField(auto_now_add=True,
+            verbose_name=_('Created'))
+            打印出来为：datetime.datetime(2014, 2, 10, 8, 49, 23, tzinfo=)
+            在页面显示的时候需要进行格式的调整，简单来说就是通过月份和日期判断，为当天则只显示时间，否则显示日期加时间。
+            测试过程中发现，显示的时间早了8个小时，原因是“tzinfo=”引起的。
+            通过astimezone把时区调整了一下：
+            shanghai_tz=pytz.timezone("Asia/Shanghai")
+            order_sh_time = o_time.astimezone(shanghai_tz)
+        </p>
+    </div>
+    <div id = "d2">
+        <img class = "c3" src = "../static/image/5.png" alt = "" width = "300px" height = "150px" title = "人物1">
+        <p class = "c4">
+            目前发现的问题是一个时间不准的问题：
+            有一个字段的定义如下：
+            created = models.DateTimeField(auto_now_add=True,
+            verbose_name=_('Created'))
+            打印出来为：datetime.datetime(2014, 2, 10, 8, 49, 23, tzinfo=)
+            在页面显示的时候需要进行格式的调整，简单来说就是通过月份和日期判断，为当天则只显示时间，否则显示日期加时间。
+            测试过程中发现，显示的时间早了8个小时，原因是“tzinfo=”引起的。
+            通过astimezone把时区调整了一下：
+            shanghai_tz=pytz.timezone("Asia/Shanghai")
+            order_sh_time = o_time.astimezone(shanghai_tz)
+        </p>
+    </div>
+    <div id = "d2">
+        <img class = "c3" src = "../static/image/7.png" alt = "" width = "300px" height = "150px" title = "人物1">
+        <p class = "c4">
+            目前发现的问题是一个时间不准的问题：
+            有一个字段的定义如下：
+            created = models.DateTimeField(auto_now_add=True,
+            verbose_name=_('Created'))
+            打印出来为：datetime.datetime(2014, 2, 10, 8, 49, 23, tzinfo=)
+            在页面显示的时候需要进行格式的调整，简单来说就是通过月份和日期判断，为当天则只显示时间，否则显示日期加时间。
+            测试过程中发现，显示的时间早了8个小时，原因是“tzinfo=”引起的。
+            通过astimezone把时区调整了一下：
+            shanghai_tz=pytz.timezone("Asia/Shanghai")
+            order_sh_time = o_time.astimezone(shanghai_tz)
+        </p>
+    </div>
+    <div id = "d2">
+        <img class = "c3" src = "../static/image/6.png" alt = "" width = "300px" height = "150px" title = "人物1">
+        <p class = "c4">
+            目前发现的问题是一个时间不准的问题：
+            有一个字段的定义如下：
+            created = models.DateTimeField(auto_now_add=True,
+            verbose_name=_('Created'))
+            打印出来为：datetime.datetime(2014, 2, 10, 8, 49, 23, tzinfo=)
+            在页面显示的时候需要进行格式的调整，简单来说就是通过月份和日期判断，为当天则只显示时间，否则显示日期加时间。
+            测试过程中发现，显示的时间早了8个小时，原因是“tzinfo=”引起的。
+            通过astimezone把时区调整了一下：
+            shanghai_tz=pytz.timezone("Asia/Shanghai")
+            order_sh_time = o_time.astimezone(shanghai_tz)
+        </p>
+    </div>
+    <div id = "d2">
+        <img class = "c3" src = "../static/image/7.png" alt = "" width = "300px" height = "150px" title = "人物1">
+        <p class = "c4">
+            目前发现的问题是一个时间不准的问题：
+            有一个字段的定义如下：
+            created = models.DateTimeField(auto_now_add=True,
+            verbose_name=_('Created'))
+            打印出来为：datetime.datetime(2014, 2, 10, 8, 49, 23, tzinfo=)
+            在页面显示的时候需要进行格式的调整，简单来说就是通过月份和日期判断，为当天则只显示时间，否则显示日期加时间。
+            测试过程中发现，显示的时间早了8个小时，原因是“tzinfo=”引起的。
+            通过astimezone把时区调整了一下：
+            shanghai_tz=pytz.timezone("Asia/Shanghai")
+            order_sh_time = o_time.astimezone(shanghai_tz)
+        </p>
+    </div>
+    <div id = "d2">
+        <img class = "c3" src = "../static/image/6.png" alt = "" width = "300px" height = "150px" title = "人物1">
+        <p class = "c4">
+            目前发现的问题是一个时间不准的问题：
+            有一个字段的定义如下：
+            created = models.DateTimeField(auto_now_add=True,
+            verbose_name=_('Created'))
+            打印出来为：datetime.datetime(2014, 2, 10, 8, 49, 23, tzinfo=)
+            在页面显示的时候需要进行格式的调整，简单来说就是通过月份和日期判断，为当天则只显示时间，否则显示日期加时间。
+            测试过程中发现，显示的时间早了8个小时，原因是“tzinfo=”引起的。
+            通过astimezone把时区调整了一下：
+            shanghai_tz=pytz.timezone("Asia/Shanghai")
+            order_sh_time = o_time.astimezone(shanghai_tz)
+        </p>
+    </div>
+  </div>
+  <div id = "font">
+      <div class = "form_last_line">
+        <span><a href = "/team">制作团队</a></span>
+        <span><a href = "/about">关于网站</a></span>
+        {% if key %}
+        <span><a href = "/connecting">联系客服</a></span>
+        {% else %}
+        <span><a href = "/login">联系客服</a></span>
+        {% endif %}
+      </div>
+    </div>
+</div>
+</body>
+</html>

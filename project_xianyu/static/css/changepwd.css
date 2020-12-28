@@ -1,0 +1,215 @@
+/*清除默认样式，设置基础样式*/
+body, h2, span {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: black;
+  font-size: 14px;
+}
+
+input {
+  outline: none;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+/*页面整体结构样式*/
+#top, #main {
+  width: 1000px;;
+  margin: 0 auto;
+
+}
+
+/*顶部标题*/
+#top h2 {
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+  text-align: center;
+}
+
+/*主体区域*/
+#main {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/*右列*/
+form {
+  border: 1px;
+  box-sizing: border-box;
+  padding-left: 100px;
+}
+
+.form-line {
+  margin-bottom: 5px;
+  font-weight: normal;
+
+}
+
+.form-line   .tooltip {
+  width: 170px;
+  display: inline-block;
+  visibility: hidden;
+  color: red;
+}
+
+.form-line   .tipText {
+  display: none;
+}
+
+.form-line > span {
+
+  width: 65px;
+  height: 50px;
+  text-align: right;
+  line-height: 30px;
+  margin-right: 40px;
+}
+
+/*第三行*/
+.form-line > div > input {
+  width: 15px;
+  height: 15px;
+  vertical-align: top;
+}
+
+/*第四行*/
+.form-line > div > table {
+  vertical-align: top;
+
+}
+
+.form-line .btu {
+  width: 240px;
+  height: 50px;
+  background-color: #64a131;
+  color: white;
+  border: 1px solid #64a131;
+  vertical-align: bottom;
+  font-size: 20px;
+  border-radius: 5px;
+  text-align: center;
+  margin-right: 100px;
+
+}
+
+.form-line a.btu {
+  float: right;
+  background-color: white;
+  color: #64a131;
+}
+
+#t1{
+  padding-right: 30px;
+}
+
+#t2{
+  padding-bottom: 30px;
+}
+
+#mymessage .changepsw{
+    border: 1px solid rgba(0,0,0,0.3);
+    width: 950px;
+    height: 450px;
+    float: right;
+    padding-top: 80px;
+    background-color:rgba(255,255,255,0.85);
+    background-position:center;
+}
+
+#mymessage .changepsw .btu2{
+  width: 240px;
+  height: 50px;
+  background-color: #64a131;
+  color: white;
+  border: 1px solid #64a131;
+  vertical-align: bottom;
+  font-size: 20px;
+  border-radius: 5px;
+  text-align: center;
+  margin-right: 100px;
+}
+
+.alert-contain-modal {
+  position: absolute;;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 10000;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.alert-contain-modal .alert-contain {
+  background: #fff;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -150px;
+  margin-top: -200px;
+}
+
+.alert-contain-modal .alert-contain .alert-header {
+  background-color: #64a131;
+  color: #fff;
+  height: 40px;
+  line-height: 40px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.alert-contain-modal .alert-contain .alert-header span {
+  margin-left: 10px;
+}
+
+.alert-contain-modal .alert-contain .alert-header .close {
+  float: right;
+  margin-right: 10px;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.alert-contain-modal .alert-contain .alert-content {
+  color: #333;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  bottom: 40px;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.alert-contain-modal .alert-contain .alert-footer {
+  text-align: right;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 40px;
+}
+
+.alert-contain-modal .alert-contain .alert-footer .btn {
+  text-decoration: none;
+  margin-top: 5px;
+  display: inline-block;
+  cursor: pointer;
+  margin-right: 10px;
+  padding: 5px 10px;
+  background-color: #64a131;
+  color: #fff;
+  border: 1px solid #64a131;
+  border-radius: 5px;
+}
+
+

@@ -1,0 +1,169 @@
+/*清除默认样式，设置基础样式*/
+body,h2,p{
+    margin: 0;
+    padding: 0;
+}
+body{
+    color: black;
+    font-size: 14px;
+}
+a{
+    color: #999;
+    text-decoration: none;
+}
+p{
+    font-size: 16px;
+}
+input:focus{
+    /*取消表单控件在焦点下的轮廓线*/
+    outline:none;
+    font-size: 16px
+}
+/*页面整体结构样式*/
+#top,#main{
+    width: 1100px;
+    margin:0 auto ;
+}
+/*顶部标题*/
+#top h2{
+    border-bottom: 1px solid #eee;
+    padding: 30px 0;
+    /*取消加粗效果*/
+    font-weight: normal;
+    text-align: center;
+
+}
+/*主体区域*/
+#main{
+    margin-top: 30px;
+    overflow: hidden;
+    background: url(/static/image/数钱钱.gif) 6px top no-repeat;
+    background-size: 100% 100%;
+    border-radius: 20px;
+}
+
+/*左列*/
+.left{
+    float: left;
+}
+
+.left #sty1{
+  height: 120px;
+  width: 380px;
+  overflow: hidden;
+  margin-top: 70px;
+  margin-left: -30px;
+}
+
+.left #sty2 {
+  height: 100px;
+  width: 500px;
+  overflow: hidden;
+  margin-left: 40px;
+ }
+
+.left #sty3 {
+  height: 100px;
+  width: 500px;
+  overflow: hidden;
+  margin-left: 80px;
+ }
+
+.left #sty2>img {
+  margin: -120px -100px 0 0 ;
+
+}
+
+.left #sty3>img {
+  margin: -220px 0 0 0 ;
+
+}
+
+
+
+/*右列*/
+form{
+  float: right;
+  padding-right: 40px;
+  padding-top: 50px;
+  background-color:rgba(255,255,255,0.7);
+  /*background-position:center;*/
+}
+/*显示反馈信息*/
+#special{
+    height: 15px;
+    margin-left: 160px;
+    margin-bottom: 5px;
+}
+#special>span{
+    color: red;
+}
+.form-line{
+    margin-bottom: 30px;
+}
+.form-line-2{
+    margin-top: -20px;
+    width: 300px;
+    margin-left: 160px;
+    height: 50px;
+}
+.form-line>p{
+    float: left;
+    width: 100px;
+    height: 50px;
+    text-align: right;
+    line-height: 50px;
+    margin-right: 40px;
+}
+.uinput{
+    width: 300px;
+    height: 50px;
+    border: 1px solid #999;
+    box-sizing: border-box;
+    padding-left: 20px;
+    border-radius: 5px;
+}
+.uinput-2{
+    width: 200px;
+    height: 50px;
+    border: 1px solid #999;
+    box-sizing: border-box;
+    padding-left: 20px;
+    border-radius: 5px;
+}
+
+/*第三行*/
+.form-line>div>p{
+    float: right;
+}
+.form-line>div>p a{
+    text-decoration: underline;
+    color: black;
+}
+.form-line>div>input{
+    width: 18px;
+    height: 18px;
+    vertical-align: top;
+    margin-top: 0;
+}
+/*第四行*/
+
+.form-line .btu{
+    width:140px ;
+    height:50px ;
+    background-color: #64a131;
+    color: white;
+    border: 1px solid #64a131;
+    vertical-align: bottom;
+    font-size: 20px;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 50px;
+
+}
+.form-line a.btu{
+    float: right;
+    background-color: white;
+    color: #64a131;
+
+}

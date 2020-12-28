@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+  <meta charset = "UTF-8">
+  <title>修改密码</title>
+  <link rel = "stylesheet" href = "/static/css/changepwd.css">
+  <link rel = "stylesheet" href = "/static/css/index.css" type = "text/css">
+  <link rel = "shortcut icon" href = "/static/image/图标.png">
+  <script src = "/static/js/common.js"></script>
+  <script src = "/static/jquery/jquery-3.1.1.min.js"></script>
+  <script src = "/static/jquery/jquery.cookie.js"></script>
+  <script src = "/static/js/changepsw.js"></script>
+</head>
+<body   style="background-image:url('/static/image/big_exchange.jpg');
+background-size: cover;" >
+<div id = "container">
+  <div id = "title">
+     {% if key %}
+    <ul>
+      <li><a href = "/">欢乐GO首页</a></li>
+      <li><span>Hi，</span></li>
+      <li style="margin: 0" class = "last_line"><a href = "/personal">{{ user_name }}</a></li>
+      <li class = "last_line"><a href = "/loginout" >退出</a></li>
+    </ul>
+    <ul style="float: right;margin-right: 50px">
+      <li style="margin-left: 550px"><a href = "/personal">个人中心</a></li>
+      <li ><a href = "/putaway">闲置甩卖</a></li>
+    </ul>
+      {% else %}
+    <ul>
+      <li><a href = "/">欢乐GO首页</a></li>
+      <li><a href = "/login">请登录</a></li>
+      <li class = "last_line"><a href = "/register">免费注册</a></li>
+    </ul>
+    <ul style="float: right;margin-right: 50px">
+      <li style="margin-left: 550px"><a href = "/login">个人中心</a></li>
+      <li><a href = "/login">闲置甩卖</a></li>
+    </ul>
+    {% endif %}
+  </div>
+  <div id = "nav" style="  padding-top: 8px;">
+    <div class = "form_nav_line">
+      <span style="font: 40px '楷体	KaiTi'"><a href = "/personal" >个人中心</a></span>
+    </div>
+  </div>
+</div>
+<div id = "mymessage">
+  <div id = "nav">
+    <div class = "headpor">
+      <img src = "/static/image/grxx.png">
+    </div>
+    <div>
+      <ul>
+        <li><a href = "/personal">个人信息</a></li>
+      </ul>
+      <ul>
+        <li><a href = "changepwd">修改密码</a></li>
+      </ul>
+      <ul>
+        <li><a href = "/mythings">我的闲置</a></li>
+      </ul>
+      <ul>
+        <li><a href = "/order_list">历史订单</a></li>
+      </ul>
+    </div>
+  </div>
+  <form action = "javascript:" method = "get" class = "changepsw">
+    <div>
+      <span>选择验证身份方式：</span>
+      <input type = "checkbox"/>密码验证 &nbsp;&nbsp;&nbsp;&nbsp;
+      <a href = "/update_pwd" style="color: red">邮箱验证</a>
+    </div>
+    <br>
+    {% csrf_token %}
+    <table>
+      <tr class = "form-line">
+        <td id="t1" valign="top">
+          <span>用户原密码:</span>
+        </td>
+        <td id="t2">
+          <input type = "password" name = "user_pwd" class = "formVal" placeholder = "请输入原密码" id="pwd_old">
+          <span class = "tooltip"></span>
+          <span class = "tipText"></span>
+          <span class = "tipText"></span>
+        </td>
+      </tr>
+      <tr class = "form-line">
+        <td id="t1" valign="top">
+          <span>用户新密码:</span>
+        </td>
+        <td id="t2">
+          <input type = "password" name = "newpassword" class = "formVal" placeholder = "请输入新密码" id="pwd_new">
+          <span class = "tooltip"></span>
+          <span class = "tipText">*密码格式不对</span>
+          <span class = "tipText">*密码不能为空</span>
+        </td>
+      </tr>
+      <tr class = "form-line">
+        <td id="t1" valign="top">
+          <span>确认新密码:</span>
+        </td>
+        <td id="t2">
+          <input type = "password" name = "confirmnewPassword" class = "formVal" placeholder = "确认密码">
+          <span class = "tooltip"></span>
+          <span class = "tipText">*密码不一致</span>
+          <span class = "tipText">*确认密码不能为空</span>
+        </td>
+      </tr>
+    </table>
+    <div style="">
+      <input type = "submit" value = "提交" class = "btu2" onclick = "return subimit()">
+    </div>
+  </form>
+</div>
+
+</body>
+</html>

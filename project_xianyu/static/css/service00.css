@@ -1,0 +1,134 @@
+
+/*清除默认样式*/
+body, h1, h2, h3, h4, h5, h6, p, ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  background: #E1FFFF;
+}
+
+.Content-Main {
+  background-image: url(/static/image/lianxikefu.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 1300px 800px;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 50px;
+  padding: 20px 30px 20px 30px;
+  font: 16px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-shadow: 1px 1px 1px #FFF;
+  border: 1px solid #DDD;
+  border-radius: 5px;
+  color: #888;
+}
+
+.Content-Main h1 {
+  display: block;
+  padding: 0 0 10px 40px;
+  margin: -10px -30px 30px -30px;
+  font: 25px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  border-bottom: 1px solid #DADADA;
+  color: #000000;
+}
+
+.Content-Main label {
+  display: block;
+  margin: 0 0 5px;
+}
+
+.Content-Main label > span {
+  float: left;
+  width: 20%;
+  padding-right: 10px;
+  margin-top: 10px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  text-align: right;
+  color: #333;
+}
+
+.Content-Main input[type="text"], .Content-Main textarea {
+  width: 70%;
+  height: 20px;
+  padding: 5px 0 5px 5px;
+  margin-bottom: 10px;
+  margin-right: 6px;
+  margin-top: 10px;
+  line-height: 15px;
+  border: 1px solid #CCC;
+  color: #888;
+  border-radius: 5px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  font-size: 16px;
+}
+
+.select2 {
+  width: 13%;
+  border: 1px solid #CCC;
+  color: #888;
+  border-radius: 5px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.Content-Main textarea {
+  width: 70%;
+  height: 100px;
+  padding: 5px 0 0 5px;
+}
+
+.Content-Main textarea.order_id {
+  width: 70%;
+  height: 20px;
+  padding: 5px 0 0 5px;
+}
+
+.button {
+  padding: 10px 25px 10px 25px;
+  margin-left: 111px;
+  border-radius: 4px;
+  border: 1px solid #CCC;
+  background: #FFF;
+  color: #333;
+}
+
+.button:hover {
+  color: #333;
+  background-color: #EBEBEB;
+  border-color: #ADADAD;
+}
+
+#bottom div {
+  float: right;
+}
+
+#bottom > .logo {
+  width: 168px;
+  border-radius: 5px;
+}
+
+#bottom > .fontImg {
+  width: 650px;
+}
+
+#bottom .erweima {
+  width: 100px;
+  float: right;
+  margin-right: 10px;
+}
+
+#bottom .android {
+  width: 125px;
+  margin: 8px -10px 5px 0;
+}
+
+#bottom div p {
+  width: 125px;
+}
+
+#bottom p {
+  text-align: center;
+}

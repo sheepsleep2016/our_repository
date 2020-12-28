@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8">
+    <title>Title</title>
+    <script src="./jquery/jquery-3.1.1.min.js"></script>
+    <script>
+        $(function(){
+            $("#btnClick").click(function () {
+                var params = {
+                    uname : "lvzemaria",
+                    uage : 30
+                }
+                $.get("/server/",params,function (data) {
+                    $("#show").html(data);
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+    <h1>这是个示例</h1>
+    <button id="btnClick">Send Ajax Request</button>
+    <div id="show"></div>
+</body>
+</html>

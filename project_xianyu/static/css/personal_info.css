@@ -1,0 +1,40 @@
+#umessage, #changepsw, #hist_order {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  width: 950px;
+  height: 430px;
+  float: right;
+  padding-top: 20px;
+  background-color:rgba(255,255,255,0.85);
+  /*background-position:center;*/
+}
+
+
+#umessage .umessage_img {
+
+  float: left;
+  overflow: hidden;
+  margin: 50px 50px;
+}
+
+#umessage .umessage_infor {
+  float:left;
+  overflow: hidden;
+  margin: 30px 100px;
+
+}
+
+#umessage > .umessage_infor > .form_line {
+  margin-top: 20px;
+}
+
+#umessage > .umessage_infor > .form_line > .btu {
+  margin-left: 60px;
+}
+
+/*#test-image-preview {*/
+   /*width: 100%;*/
+   /*height: 200px;*/
+   /*background-size: contain;*/
+   /*background-repeat: no-repeat;*/
+   /*background-position: center center;*/
+/*}*/

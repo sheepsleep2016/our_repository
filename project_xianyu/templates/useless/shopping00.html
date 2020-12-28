@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+  <meta charset = "UTF-8">
+  <title>{{ dict_shopping.commmodity_name }}</title>
+</head>
+<body>
+  {% for i,j in dict_shopping.items %}
+  <p>{{ i }}:{{ j }}</p>
+  {% endfor %}
+</body>
+</html>

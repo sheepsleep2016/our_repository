@@ -1,0 +1,133 @@
+#hist_order {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  width: 950px;
+
+  float: right;
+  background-color:rgba(255,255,255,0.85);
+  background-position:center;
+  /*padding-top: 20px;*/
+  /*margin: ;*/
+  /*设置最小高度,内容尺寸高度>400时
+  正常将main撑开显示，内容尺寸高度<400，按400显示*/
+
+  min-height: 450px;
+}
+
+/*#hist_order{*/
+/*margin:15px 0;*/
+/*!*设置最小高度,内容尺寸高度>400时*/
+/*正常将main撑开显示，内容尺寸高度<400，按400显示*!*/
+
+/*min-height:400px;*/
+/*}*/
+/* 顶部总数量 */
+#hist_order > h1 {
+  font: 40px "微软雅黑";
+  color: #333;
+  text-align: center;
+  background-color: burlywood;
+  box-shadow: 0 2px 5px gray;
+}
+
+/* 购物车标题 */
+#hist_order .order_title {
+  height: 36px;
+  border-top: 1px solid #333;
+  background: #e6e6e5;
+  /*box-shadow: 0 2px 5px gray;*/
+  line-height: 36px;
+  text-align: center;
+  font-size: 14px;
+}
+
+#hist_order p {
+  color: #333;
+  float: left;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.gname {
+  width: 380px;
+}
+
+.gprice,.gcount,.gsum {
+  width: 100px;
+}
+
+.gsolder,.gplace {
+  width: 135px;
+  text-align: center;
+  /*display: inline-block;*/
+  /*vertical-align: middle;*/
+}
+
+.gtype,.gisac {
+  width: 135px;
+  text-align: center;
+  /*display: inline-block;*/
+  /*vertical-align: middle;*/
+}
+
+/*.gsolder,.gplace >span {*/
+  /*display: inline-block;*/
+  /*height:100%;*/
+  /*vertical-align: middle;*/
+/*}*/
+
+
+/* 商品展示 */
+.content .order_message {
+  height: 40px;
+  line-height: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  padding-left: 10px;
+}
+
+.order_message #putaway {
+  float: right;
+  margin-right: 50px;
+  color: blue;
+}
+
+.order_message #putaway:hover{
+  color: red;
+}
+
+.order_item {
+  height: 115px;
+  background: #fff;
+  border-top: 1px solid #999;
+  border-bottom: 1px solid #999;
+  margin-bottom: 10px;
+}
+
+.order_item > p {
+  height: 115px;
+  border-right: 1px solid #333;
+}
+
+.order_item .gsum {
+  text-align: center;
+  line-height: 115px;
+  border: none;
+  border-right: 1px solid #333;
+}
+
+.order_item .gname span {
+  display: block;
+  margin-top: 15px;
+}
+
+.order_item .gname img {
+  float: left;
+  width: 94px;
+  height: 94px;
+  margin: 10px 10px;
+}
+
+.order_item .gprice, .order_item .gcount , .order_item .gtype ,.order_item .gis{
+  text-align: center;
+  line-height: 115px;
+}
+

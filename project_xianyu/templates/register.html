@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset = "utf-8">
+  <title>用户注册</title>
+  <link rel = "stylesheet" href = "/static/css/register.css">
+  <script src = "/static/js/common.js"></script>
+  <script src = "/static/jquery/jquery-3.1.1.min.js"></script>
+  <script src = "/static/jquery/jquery.cookie.js"></script>
+</head>
+<body>
+<div id = "top">
+  <h2>欢迎注册</h2>
+</div>
+<div id = "main">
+  <div class = "title">
+    <span>新用户注册</span>
+  </div>
+  <form action = "" name = "form" method = "post">
+    {% csrf_token %}
+    <div class = "form-line">
+      <span>用户帐号:</span>
+      <input type = "text" name = "username" class = "formVal" placeholder = "请输入帐号" id = "u_user">
+      <table class = "tooltip"></table>
+      <span class = "tipText">*用户名已存在</span>
+      <span class = "tipText">*用户名格式不对</span>
+      <span class = "tipText">*用户名不能为空</span>
+    </div>
+    <div class = "form-line">
+      <span>用户密码:</span>
+      <input type = "password" name = "password" class = "formVal" placeholder = "请输入密码">
+      <table class = "tooltip"></table>
+      <span class = "tipText"></span>
+      <span class = "tipText">*密码格式不对</span>
+      <span class = "tipText">*密码不能为空</span>
+    </div>
+    <div class = "form-line">
+      <span>确认密码:</span>
+      <input type = "password" name = "confirmPassword" class = "formVal" placeholder = "确认密码">
+      <table class = "tooltip"></table>
+      <span class = "tipText"></span>
+      <span class = "tipText">*密码不一致</span>
+      <span class = "tipText">*确认密码不能为空</span>
+    </div>
+    <div class = "form-line">
+      <span>用户邮箱:</span>
+      <input type = "text" name = "email" class = "formVal" placeholder = "请输入邮箱" id = "u_email">
+      <table class = "tooltip"></table>
+      <span class = "tipText">*用户邮箱已存在</span>
+      <span class = "tipText">*邮箱格式不对</span>
+      <span class = "tipText">*邮箱不能为空</span>
+    </div>
+    <div class = "form-line">
+      <span>手机号码:</span>
+      <input type = "text" name = "telphone" class = "formVal" placeholder = "请输入手机号码" id = "u_phone">
+      <table class = "tooltip"></table>
+      <span class = "tipText">*用户手机号已存在</span>
+      <span class = "tipText">*手机号码格式不对</span>
+      <span class = "tipText">*手机号码不能为空</span>
+    </div>
+    <div class = "form-line">
+      <span>身份证号:</span>
+      <input type = "text" name = "identity" class = "formVal" placeholder = "请输入身份证号码" id = "u_card">
+      <table class = "tooltip"></table>
+      <span class = "tipText">*用户身份证已存在</span>
+      <span class = "tipText">*身份证号格式不对</span>
+      <span class = "tipText">*身份证号不能为空</span>
+
+    </div>
+    <div class = "form-line" style="text-align: left; margin-left:15%">
+      <input type = "button" class = "getcode" onclick = "button()" value = "获取验证码" name = "checkButton" id="btnSendCode">
+      <input type = "text" name = "checknum" class = "email" placeholder = "请输入邮箱验证码,区分大小写哦" id = "u_check">
+      <span class = "tooltip"></span>
+      <span class = "tipText"></span>
+      <span class = "tipText"></span>
+      <span class = "tipText"></span>
+    </div>
+    <div class = "form-line" style="text-align: left; margin-left:20%">
+      <div class = "uagreement">
+        <input type = "checkBox" id = "readme" class = "btn" onclick = "if (this.checked){enable()}  else {disable()}">
+        <a href = "/readme" target = "_blank">阅读并同意我们的协议</a>
+      </div>
+    </div>
+    <div class="form-line">
+      <p></p>
+      <div>
+        <input type="submit" id="accept" disabled="true" value="注册" name="formSubmit" class="btu" onclick="return subimit()"
+               onsubmit="alert('Hello ' + formSubmit.fname.value +','+'验证码已发送您邮箱，请尽快完成验证哦')" >
+      </div>
+    </div>
+  </form>
+</div>
+<script src = "/static/js/register.js"></script>
+</body>
+</html>

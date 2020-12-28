@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"> 
+	<title>找回密码</title>
+{#	<link rel="stylesheet" href="../static/css/bootstrap.min.css">#}
+	<script src="../../static/js/jquery.min.js"></script>
+	<script src="../../static/js/bootstrap.min.js"></script>
+  <script src="../../static/jquery/jquery-3.1.1.min.js"></script>
+  <style>
+    #step1{
+    display:block;
+    }
+    #step2,#step3{
+      display: none;
+    }
+    #step1,#step2,#step3{
+      position: absolute;
+      width: 100%;
+      height: 40%;
+      left: 2%;
+      top:10%;
+    }
+  </style>
+</head>
+<body>
+<!-- 下一步，下一步 -->
+<div id="step1" >
+  <div class="panel panel-success">
+  	<div class="panel-heading">
+  		<h3 class="panel-title">请输入您的账号</h3>
+  	</div>
+  	<form class="panel-body" method = "POST">
+    {% csrf_token %}
+      <input type="text" placeholder="请输入用户名或邮箱" name="msg"><br><br>
+	  <!-- <button type="button" class="btn btn-primary">上一步</button> -->
+      <input type="submit" class="btn btn-success" onclick="getnext('step2')" value="下一步">
+  	</form>
+  </div>
+</div>
+<div id="step2">
+  <div class="panel panel-info">
+	<div class="panel-heading">
+		<h3 class="panel-title">请输入验证码</h3>
+	</div>
+	<div class="panel-body">
+    <input type="text" placeholder="验证码"/><br><br>
+        <span>请登录您注册时用的邮箱获取验证码</span><br>
+		<button type="button" class="btn btn-primary" onclick="getnext('step1')">上一步</button>
+        <button type="button" class="btn btn-success" onclick="getnext('step3')">下一步</button>
+	</div>
+</div>
+</div>
+<div id="step3">
+	 <div class="panel panel-info">
+	<div class="panel-heading">
+		<h3 class="panel-title">重新设置密码</h3>
+	</div>
+	<div class="panel-body">
+        请输入新密码：<input type="text" placeholder="新密码"/><br><br>
+        请再次输入密码：<input type="text" placeholder="再次确认密码"/><br><br>
+        <button type="button" class="btn btn-primary" onclick="getnext('step2')">上一步</button>
+	</div>
+</div>
+</div>
+<!-- 下一步，下一步 -->
+</body>
+<script>
+function getnext(i){
+  var sz=new Array("step1","step2","step3");
+  for(var j=0;j<sz.length;j++){
+    if(i==sz[j]){
+      document.getElementById(i).style.display="block";
+    }else{
+      document.getElementById(sz[j]).style.display="none";
+    }
+  }
+}
+</script>
+</html>

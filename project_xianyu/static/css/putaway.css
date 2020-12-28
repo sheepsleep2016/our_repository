@@ -1,0 +1,81 @@
+#umessage {
+  /* -->30%的不透明度*/
+  background-color:rgba(255,255,255,0.85);
+  background-position:center;
+  border: 1px solid #eee3;
+  width: 700px;
+  height: auto;
+
+  padding-top: 20px;
+  margin: 20px auto;
+}
+
+#umessage > div > label > input {
+  width: 120px;
+  height: 35px;
+  background-color: skyblue;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  box-shadow:2px 3px 2px 3px gray;
+}
+
+.form-line {
+  margin-bottom: 5px;
+  font-weight: normal;
+}
+
+.form-line  span {
+
+  width: 65px;
+  height: 50px;
+  text-align: right;
+  line-height: 30px;
+  margin-left: 20px;
+  margin-right: 40px;
+}
+
+#t2{
+  padding-bottom: 10px;
+}
+
+.form-line > td  #isactive {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+}
+
+/*第三行*/
+.form-line > td > input {
+  width: 400px;
+  height: 30px;
+  vertical-align: top;
+}
+
+.form-line > td > .uinput2 {
+  width: 50px;
+  height: 30px;
+  vertical-align: top;
+}
+
+.td1>p{
+  margin:  10px 20px;
+  width: 90px;
+}
+
+.discrib{
+  width: 400px;
+  height: 200px;
+}
+
+#t2>label> #upload_photo{
+  width:100px;
+  height: 100px;
+}
+
+.put_01 {
+  width: 100%;
+  line-height: 30px;
+  font-size: 15px;
+}
+

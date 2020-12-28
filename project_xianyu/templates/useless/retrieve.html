@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+  <meta charset = "UTF-8">
+  <title>添加商品</title>
+  {#  <link rel = "stylesheet" href = "/static/css/personal_info.css" type = "text/css">#}
+  <link rel = "stylesheet" href = "/static/css/index.css" type = "text/css">
+  <link rel = "stylesheet" href = "/static/css/putaway.css" type = "text/css">
+  <link rel = "shortcut icon" href = "/static/image/图标.png">
+</head>
+<body>
+
+
+<form method = "post" enctype = "multipart/form-data">
+  <!--multipart/form-data 不对字符编码。在使用包含文件上传控件的表单时，必须使用该值。-->
+  <label for = "files"><img src = "/static/image/big_exchange.jpg" draggable = "false" id = "Upload_photo"></label>
+  <input type = "file" accept = "image/png,image/gif,image/jpg,image/jpeg" id = "files" name = "files" multiple
+         onchange = "javascript:setImagePreviews();" style = "display: none"/>
+  <div id = "preview"></div>
+  <p>最多只能添加三张图片</p>
+</form>
+<script>
+  //下面用于多图片上传预览功能
+  function setImagePreviews(avalue) {
+    var docObj = document.getElementById("files");
+    var dd = document.getElementById("preview");
+    dd.innerHTML = "";
+    var fileList = docObj.files;
+    for (var i = 0; i < fileList.length; i++) {
+      dd.innerHTML += "<div style='float:left' > <img id='img" + i + "'  /> </div>";
+      var imgObjPreview = document.getElementById("img" + i);
+      if (docObj.files && docObj.files[i]) {
+        //火狐下，直接设img属性
+        imgObjPreview.style.display = 'block';
+        //控制缩略图大小
+        imgObjPreview.style.width = '5rem';
+        imgObjPreview.style.height = '5rem';
+        //imgObjPreview.src = docObj.files[0].getAsDataURL();
+        //火狐7以上版本不能用上面的getAsDataURL()方式获取，需要一下方式
+        imgObjPreview.src = window.URL.createObjectURL(docObj.files[i]);
+      }
+      else {
+        //IE下，使用滤镜
+        docObj.select();
+        var imgSrc = document.selection.createRange().text;
+        alert(imgSrc)
+        var localImagId = document.getElementById("img" + i);
+        //必须设置初始大小
+        localImagId.style.width = "5rem";
+        localImagId.style.height = "5rem";
+        //图片异常的捕捉，防止用户修改后缀来伪造图片
+        try {
+          localImagId.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale)";
+          localImagId.filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = imgSrc;
+        }
+        catch (e) {
+          alert("您上传的图片格式不正确，请重新选择!");
+          return false;
+        }
+        imgObjPreview.style.display = 'none';
+        document.selection.empty();
+      }
+      if (docObj.files.length > 3) {
+        alert('最多只能添加三张图片');
+        return;
+      }
+    }
+    return true;
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+  <meta charset = "UTF-8">
+  <title>页面2</title>
+  <link rel = "stylesheet" href = "/static/css/service00.css" type = "text/css">
+  <script src="/static/js/common.js"></script>
+  <script src="/static/jquery/jquery-3.1.1.min.js"></script>
+  <script src="/static/jquery/jquery.cookie.js"></script>
+{#  <script src="../static/js/jquery-1.11.3.js"></script>#}
+  <script src="/static/js/web_feedback.js"></script>
+</head>
+<body>
+<div class = "Content-Main">
+  <div class = "Content-Main1">
+    <h1>欢迎您对本网站的问题进行反馈</h1>
+  </div>
+  <form action = "javascript:" method = "post" class = "form-report">
+    <label>
+      <span>问题反馈:</span>
+      <textarea style="height: 200px;" id = "message" placeholder = "请详细描述您浏览本网站所遇到的问题（若问题属实,将有相关奖励）"></textarea>
+    </label>
+    <label style="text-align: center;" >
+      <input type = "button" class = "button" value = "提交" onclick="checkvalid()">
+    </label>
+  </form>
+</div>
+</body>
+</html>

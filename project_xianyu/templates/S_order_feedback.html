@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+  <meta charset = "UTF-8">
+  <title>订单问题反馈</title>
+  <link rel = "stylesheet" href = "/static/css/service00.css" type = "text/css">
+  <script src="/static/js/common.js"></script>
+  <script src="/static/jquery/jquery-3.1.1.min.js"></script>
+  <script src="/static/jquery/jquery.cookie.js"></script>
+{#  <script src="../static/js/jquery-1.11.3.js"></script>#}
+  <script src="/static/js/order_feedback.js"></script>
+</head>
+<body>
+<div class = "Content-Main">
+  <div class = "Content-Main1">
+    <h1>请您反馈您的订单问题</h1>
+  </div>
+  <form action = "javascript:" method = "post" class = "form-report">
+    {% csrf_token %}
+    <label class = "a">
+      <span style="margin-top: 0;" >请选择订单:</span>
+      <select id = "order_id" class = "select2" style="height: 26px">
+        {% for order in list_order %}
+        <option value = {{ order.order_id }}>{{ order.comm_name }}&nbsp;&nbsp;&nbsp;{{ order.order_date }}</option>
+        {% endfor %}
+      </select>
+    </label>
+    <label>
+      <span style="margin-top: 12px;" >标题:</span>
+      <input type = "text" id="title" placeholder = "请简述主要问题,如：物品值；物品质量太差，物品描述与实际不符等。" maxlength="60">
+    </label>
+    <label>
+      <span>问题详情:</span>
+      <textarea id = "message"  placeholder = "请详细描述您所遇到的问题"></textarea>
+    </label>
+    <label style="text-align: center;" >
+      <input type = "button" class = "button" value = "提交" onclick="checkvalid()">
+    </label>
+  </form>
+</div>
+</body>
+</html>

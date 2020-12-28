@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>网站介绍</title>
+  <link rel = "stylesheet" href = "/static/css/index.css" type = "text/css">
+  <link rel = "shortcut icon" href = "/static/image/图标.png">
+  <meta charset = "utf-8">
+  <script src = "/static/js/common.js"></script>
+  <script src = "/static/jquery/jquery-3.1.1.min.js"></script>
+  <script src = "/static/jquery/jquery.cookie.js"></script>
+  <style type = "text/css">
+        .c2 {
+            /* color: orange;
+            background: cyan; */
+            height: 400px;
+            background-image: url(../static/image/5.jpg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            /* margin:  */
+        }
+
+        .c3 {
+            width: 200px;
+            height: 200PX;
+            background-color: rgb(182, 168, 63);
+            float: left;
+        }
+
+        .c4 {
+            height: 100%;
+            background-color: rgb(252, 233, 208);
+            margin: 10px 0;
+            /* float:left; */
+        }
+
+        #d1 {
+
+            margin: 0 auto;
+        }
+
+        #d2 {
+          height: 100%;
+          margin: 20px 0;
+          padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+<div id = "container">
+  <div id = "title">
+    <ul>
+      <li><a href = "/">欢乐GO首页</a></li>
+      {% if key %}
+      <li><span>Hi，</span></li>
+      <li style="margin: 0" class = "last_line"><a href = "/personal">{{ user_name }}</a></li>
+      <li class = "last_line"><a href = "/loginout" >退出</a></li>
+      <li style="margin-left: 550px"><a href = "/personal">个人中心</a></li>
+      <li ><a href = "/putaway">闲置甩卖</a></li>
+      {% else %}
+      <li><a href = "/login">请登录</a></li>
+      <li class = "last_line"><a href = "/register">免费注册</a></li>
+      <li style="margin-left: 550px"><a href = "/login">个人中心</a></li>
+      <li><a href = "/login">闲置甩卖</a></li>
+      {% endif %}
+    </ul>
+  </div>
+  <div id = "d1">
+    <div class = "c2"></div>
+    <h1>网站介绍:</h1>
+    <div id = "d2">
+        <h2>为什么要做？</h2>
+        <p class = "c4">
+            做这个网站的初衷，是因为在我们平时生活中，有时候整理房间的的时候，会发现一些闲置了很久的东西，
+        这些东西可能是之前一时冲动买的，也可能是买了之后发现用不上，或者是已经有了更好的替代品的；总之，对
+        于现在的我们来说没有用。但这些东西一般仍具有使用价值的（没有使用价值的估计也就扔垃圾桶了），所以送
+        出或者交易给其他人的话，就比较好了，于是打算做一个二手交易网站，让人们可以把闲置物品换钱，使得物尽
+        其用。
+        </p>
+    </div>
+    <div id = "d2">
+        <h2>网站制作需求</h2>
+        <p class = "c4">
+            明确制作网站的需求，包括知识上的需求和需要实现的功能：
+          1.了解网站制作的相关知识，向项目经理请教，看之前班级的课件资料，网上搜索web开发的相关资料，理清
+          网站制作的思路。
+          2.先参考已有的成熟的二手交易平台，比如闲鱼和58同城二手交易市场等，明确网站的基本功能构造
+          3.编写需求文档
+        </p>
+    </div>
+    <div id = "d2">
+        <h2>网站制作具体步骤</h2>
+        <p class = "c4">
+          1.网站采用django架构，mysql作为数据库，ajax进行异步刷新，web
+          2.先参考已有的成熟的二手交易平台，比如闲鱼和58同城二手交易市场等，明确网站的基本功能构造
+          3.编写需求文档
+        </p>
+    </div>
+  </div>
+  <div id = "font">
+      <div class = "form_last_line">
+        <span><a href = "/team">制作团队</a></span>
+        <span><a href = "/about">关于网站</a></span>
+        {% if key %}
+        <span><a href = "/connecting">联系客服</a></span>
+        {% else %}
+        <span><a href = "/login">联系客服</a></span>
+        {% endif %}
+      </div>
+    </div>
+</div>
+</body>
+</html>

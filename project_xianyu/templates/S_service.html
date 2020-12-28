@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>联系客服</title>
+  <link rel = "stylesheet" href = "../static/css/index.css" type = "text/css">
+  <link rel = "stylesheet" href = "../static/css/service.css" type = "text/css">
+  <link rel = "shortcut icon" href = "../static/image/图标.png">
+  <meta charset = "utf-8">
+  {#  <script src = "/static/js/common.js"></script>#}
+  {#  <script src = "/static/jquery/jquery-3.1.1.min.js"></script>#}
+  {#  <script src = "../static/jquery/jquery.cookie.js"></script>#}
+  {#  <script src = "../static/js/connecting.js"></script>#}
+</head>
+<body>
+<div id = "container">
+  <div id = "title">
+    {% if key %}
+    <ul>
+      <li><a href = "/">欢乐GO首页</a></li>
+      <li><span>Hi，</span></li>
+      <li style="margin: 0" class = "last_line"><a href = "/personal">{{ user_name }}</a></li>
+      <li class = "last_line"><a href = "/loginout" >退出</a></li>
+    </ul>
+    <ul style="float: right;margin-right: 50px">
+      <li style="margin-left: 550px"><a href = "/personal">个人中心</a></li>
+      <li ><a href = "/putaway">闲置甩卖</a></li>
+    </ul>
+      {% else %}
+    <ul>
+      <li><a href = "/">欢乐GO首页</a></li>
+      <li><a href = "/login">请登录</a></li>
+      <li class = "last_line"><a href = "/register">免费注册</a></li>
+    </ul>
+    <ul style="float: right;margin-right: 50px">
+      <li style="margin-left: 550px"><a href = "/login">个人中心</a></li>
+      <li><a href = "/login">闲置甩卖</a></li>
+    </ul>
+    {% endif %}
+  </div>
+  <div id = "s">
+    <div class = "Content-Main">
+      <div class = "Content-Main1">
+        <h1>请选择需要反馈的问题:</h1>
+      </div>
+      <div class = "web1">
+        {% if key %}
+        <a href = "1">
+          <h2 class = "weba">订单问题</h2>
+        </a>
+        {% else %}
+        <a href = "/login">
+          <h2 class = "weba" onclick="alert('请先进行登录')">订单问题</h2>
+        </a>
+        {% endif %}
+      </div>
+      <div class = "web2">
+        {% if key %}
+        <a href = "2">
+          <h2 class = "webb">网站问题</h2>
+        </a>
+        {% else %}
+        <a href = "/login">
+          <h2 class = "webb" onclick="alert('请先进行登录')">网站问题</h2>
+        </a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  <!-- 底部 -->
+  <div id = "font">
+    <div class = "form_last_line">
+      <span><a href = "/team">制作团队</a></span>
+      <span><a href = "/about">关于网站</a></span>
+      <span><a href = "/connecting">联系客服</a></span>
+    </div>
+  </div>
+</div>
+</body>
+</html>

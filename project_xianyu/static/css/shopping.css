@@ -1,0 +1,193 @@
+a{
+	color: black;
+
+}
+a:hover{
+	color: red;
+}
+#header {
+	width: 1000px;
+	height: 50px;
+	border: 1px solid rgba(0,0,0,0.3);
+	background-color: #E7E7E7;
+	margin: 20px auto;
+
+}
+#header span {
+	float: left;
+	line-height: 50px;
+	font-size: 20px;
+	color: black;
+	padding-left:10px;
+	width: 200px;
+	border: 1px solid rgba(0,0,0,0.1);
+}
+.menu{
+
+	width: 200px;
+
+}
+.menu img{
+	float: left;
+	margin-left: 5px;
+	margin-top: 5px;
+}
+.menu_parent{
+	float: left;
+	position: relative;
+
+	z-index: 1;
+
+
+}
+
+.menu_child{
+		/*内层列表默认隐藏*/
+	display: none;
+	position: absolute;
+	width: 200px;
+	left: -50px;
+}
+
+ol li {
+	background-color: rgba(255, 255, 255, 0.4);
+	padding-left: 20px;
+	color: #3c3f41;
+	font: 16px "楷体";
+}
+
+
+/*鼠标悬停隐藏*/
+ul>li:hover>ol{
+	display: block;
+}
+
+#box{
+	margin:20px auto;
+}
+
+/* 轮播 */
+#banner{
+	width: 580px;
+	height:400px;
+	position:relative;
+	/*float: left;*/
+	align-content: center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+}
+#banner>#pic{
+  width:500px;
+  height:400px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+#banner img{
+	width:auto;
+  height: 400px;
+	overflow: hidden;
+}
+
+#banner ul{
+	width:70px;
+	position:absolute;
+	bottom:15px;
+	left:50%;
+	margin-left:-35px;
+}
+#banner li{
+	float:left;
+	width:10px;
+	height:10px;
+	border-radius:50%;
+	background:#fff;
+	margin-right:5px;
+}
+
+#banner ul li:first-child{
+	background:red;
+}
+#banner ul li:last-child{
+	margin:0;
+}
+#banner a{
+	position:absolute;
+	width:35px;
+	height:70px;
+	border-radius:5px;
+	background:rgba(0,0,0,.1) url("/static/image/arrow-left.png") no-repeat center;
+	top:50%;
+	margin-top:-35px;
+
+}
+#banner a.left{
+	left:5px;
+}
+#banner a.right{
+	right:5px;
+	background-image:url("/static/image/arrow-right.png");
+}
+
+/*商品说明*/
+#box .main_01{
+	float: right;
+	border: 1px solid rgba(0,0,0,0.1);
+	width: 418px;
+	min-height: 400px;
+	background: white;
+
+}
+#box>.main_01>p{
+	padding-left: 20px;
+}
+#box>.main_01>p>span{
+	font:20px "宋体";
+	color:black;
+	line-height: 50px;
+ }
+#box>.main_01>p>.shop_name{
+	font: 30px '黑体';
+}
+#box>.main_01>p>.shop_discrib_01{
+	width: 200px;
+	height: 40px;
+	font-size: 14px;
+}
+#box>.main_01>p>.shop_price{
+	font:15px "宋体";
+}
+#box>.main_01>p>.shop_price_01{
+	color:red;
+}
+#box>.main_01>p>.shop_address{
+	font:15px "宋体";
+}
+#box>.main_01>form>#dianji_shop{
+	width: 200px;
+	height: 50px;
+	background-color:palevioletred;
+	border-radius: 5px;
+	margin-left: 10px;
+  font-size: 20px;
+}
+#box>.main_01>form>#dianzan{
+	margin-left: 10px;
+}
+
+#box #discrib{
+	/*float: left;*/
+	width: 700px;
+	background-color:whitesmoke ;
+	margin-top: 10px;
+}
+
+#box #discrib > p > .shop_discrib_01{
+  font: 16px "楷体";
+}
+
+
+

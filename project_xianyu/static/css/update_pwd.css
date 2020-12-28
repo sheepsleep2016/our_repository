@@ -1,0 +1,80 @@
+/*清除基础样式*/
+body,ul,ol,a,span{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+/*设置基础样式*/
+body{
+    color: black;
+    font-size: 14px;
+}
+input{
+    outline:none;
+    border:1px solid #ccc;
+    padding:5px 10px;
+    border-radius:4px;
+}
+img{
+    width: 200px;
+    height: 100px;
+}
+/*页面整体结构样式*/
+#content{
+    width: 900px;
+   margin: 0 auto;
+}
+
+#left-top a{
+    float: left;
+}
+#left-top>ul>li{
+    vertical-align: bottom;
+
+}
+#right-top{
+    height: 120px;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+#right-top ol{
+    float: right;
+    margin-top: 20px;
+}
+#right-top>ol>li{
+    float: left;
+    margin-left: 5px;
+    padding: 0 5px;
+
+}
+#nav,.form-line{
+    padding-left: 50px;
+
+}
+#nav{
+    border: 1px solid rgba(0,0,0,0.1);
+    line-height: 50px;
+    height: 50px;
+}
+.form-line>.tooltip{width:120px;display:inline-block;visibility: hidden;color:red;}
+.form-line>.tipText{display:none;}
+.form-line span{
+    line-height: 50px;
+}
+.form-line input{
+    height: 35px;
+    width: 350px;
+    margin-bottom: 20px;
+
+}
+#keyword{
+    width: 175px;
+}
+.form-line .btu{
+    width: 372px;
+    background-color: #64a131;
+    height: 47px;
+    line-height: 47px;
+
+}
+

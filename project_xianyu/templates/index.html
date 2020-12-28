@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>欢乐GO首页</title>
+  <link rel = "stylesheet" href = "/static/css/index.css" type = "text/css">
+  <link rel = "shortcut icon" href = "/static/image/图标.png">
+  <meta charset = "utf-8">
+  <script src = "/static/js/common.js"></script>
+  <script src = "/static/jquery/jquery-3.1.1.min.js"></script>
+  <script src = "/static/jquery/jquery.cookie.js"></script>
+</head>
+<body>
+<div id = "container">
+  <div id = "title">
+    {% if key %}
+    <ul>
+      <li><a href = "/">欢乐GO首页</a></li>
+      <li><span>Hi，</span></li>
+      <li style="margin: 0" class = "last_line"><a href = "/personal">{{ user_name }}</a></li>
+      <li class = "last_line"><a href = "/loginout" >退出</a></li>
+    </ul>
+    <ul style="float: right;margin-right: 50px">
+      <li style="margin-left: 550px"><a href = "/personal">个人中心</a></li>
+      <li ><a href = "/putaway">闲置甩卖</a></li>
+    </ul>
+      {% else %}
+    <ul>
+      <li><a href = "/">欢乐GO首页</a></li>
+      <li><a href = "/login">请登录</a></li>
+      <li class = "last_line"><a href = "/register">免费注册</a></li>
+    </ul>
+    <ul style="float: right;margin-right: 50px">
+      <li style="margin-left: 550px"><a href = "/login">个人中心</a></li>
+      <li><a href = "/login">闲置甩卖</a></li>
+    </ul>
+    {% endif %}
+  </div>
+  <div id = "nav">
+    <div class = "form_nav_line">
+      <span><a href = "/">最新</a></span>
+      <span><a href = "/手机">手机</a></span>
+      <span><a href = "/数码">数码</a></span>
+      <span><a href = "/服装">服装</a></span>
+      <span><a href = "/运动">运动</a></span>
+      <span><a href = "/家电">家电</a></span>
+    </div>
+  </div>
+  <div id = "main">
+    <div class = "item">
+      <ul>
+        {% for ele in list_com %}
+          <a href = "{{ ele.id }}">
+            <li>
+              <div class = "content">
+                <table class = 'table_02' cellpadding = 0px cellspacing = 0px  ;>
+                  <tr>
+                    <td colspan = "2">
+                      <p id="p-img"><img src = "{{ ele.photo.0 }}"  ></p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan = "2">
+                      <div class = p1>{{ ele.commodity_name }}</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan = "2" height = "30px" style = "border-bottom: 1px solid #5e5e5e">
+                      &yen;{{ ele.commodity_price }}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td width = "45px">
+                      <img src = "{{ ele.user_avatar }}" width = "30" height = "30">
+                    </td>
+                    <td >
+                      <p>{{ ele.user_name }}</p>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </li>
+          </a>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+    <!-- 底部 -->
+  <div id = "font">
+      <div class = "form_last_line">
+        <span><a href = "/team">制作团队</a></span>
+        <span><a href = "/about">关于网站</a></span>
+        <span><a href = "/connecting">联系客服</a></span>
+      </div>
+    </div>
+</div>
+</body>
+</html>
+
+

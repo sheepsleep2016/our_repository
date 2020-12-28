@@ -1,0 +1,148 @@
+@charset "utf-8";
+/*清除默认样式*/
+body,h1,h2,h3,h4,h5,h6,p,ul,ol{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+body {
+    background:#E1FFFF;
+}
+#s{
+  width:1000px;
+  margin:0 auto;
+
+}
+.Content-Main{
+    background:url(/static/image/客服机器人.jpg);
+    background-position: center center;
+    background-repeat:no-repeat;
+    background-size:100%;
+    max-width:1000px;
+    height:600px;
+    margin: auto;
+    margin-top: 50px;
+    padding: 20px 30px 20px 30px;
+    font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-shadow: 1px 1px 1px #FFF;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    color: #888;
+}
+.Content-Main1 h1{
+    display: block;
+    padding: 0px 0px 10px 40px;
+    margin: -10px -30px 30px -30px;
+    font: 32px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #000000;
+}
+.web1{
+    width:200px;
+    height:130px;
+    float:left;
+    position: relative;
+    margin-left: 95px;
+    margin-top: 250px;
+}
+.web1 h2{
+    display: block;
+    padding: 10px 10px 10px 10px;
+    margin: 20px 15px;
+    font: 25px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #000000;
+}
+.web2{
+    width:200px;
+    height:130px;
+    float:right;
+    position: relative;
+    margin-right: 100px;
+    margin-top: 80px;
+}
+.web2 h2{
+    display: block;
+    padding: 10px 10px 10px 10px;
+    margin: 20px 15px;
+    font: 25px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #000000;
+}
+
+/*.alert-contain-modal {*/
+  /*position: absolute;;*/
+  /*top: 0;*/
+  /*left: 0;*/
+  /*bottom: 0;*/
+  /*right: 0;*/
+  /*z-index: 10000;*/
+  /*background: rgba(0, 0, 0, 0.5);*/
+/*}*/
+
+/*.alert-contain-modal .alert-contain {*/
+  /*background: #fff;*/
+  /*width: 300px;*/
+  /*height: 200px;*/
+  /*border: 1px solid #ccc;*/
+  /*border-radius: 5px;*/
+  /*position: absolute;*/
+  /*top: 50%;*/
+  /*left: 50%;*/
+  /*margin-left: -150px;*/
+  /*margin-top: -200px;*/
+/*}*/
+
+/*.alert-contain-modal .alert-contain .alert-header {*/
+  /*background-color: #64a131;*/
+  /*color: #fff;*/
+  /*height: 40px;*/
+  /*line-height: 40px;*/
+  /*position: absolute;*/
+  /*left: 0;*/
+  /*right: 0;*/
+  /*top: 0;*/
+/*}*/
+
+/*.alert-contain-modal .alert-contain .alert-header span {*/
+  /*margin-left: 10px;*/
+/*}*/
+
+/*.alert-contain-modal .alert-contain .alert-header .close {*/
+  /*float: right;*/
+  /*margin-right: 10px;*/
+  /*color: #fff;*/
+  /*text-decoration: none;*/
+  /*cursor: pointer;*/
+/*}*/
+
+/*.alert-contain-modal .alert-contain .alert-content {*/
+  /*color: #333;*/
+  /*position: absolute;*/
+  /*top: 40px;*/
+  /*left: 0;*/
+  /*right: 0;*/
+  /*bottom: 40px;*/
+  /*padding: 10px;*/
+  /*border-bottom: 1px solid #ccc;*/
+/*}*/
+
+/*.alert-contain-modal .alert-contain .alert-footer {*/
+  /*text-align: right;*/
+  /*position: absolute;*/
+  /*left: 0;*/
+  /*right: 0;*/
+  /*bottom: 0;*/
+  /*height: 40px;*/
+/*}*/
+
+/*.alert-contain-modal .alert-contain .alert-footer .btn {*/
+  /*text-decoration: none;*/
+  /*margin-top: 5px;*/
+  /*display: inline-block;*/
+  /*cursor: pointer;*/
+  /*margin-right: 10px;*/
+  /*padding: 5px 10px;*/
+  /*background-color: #64a131;*/
+  /*color: #fff;*/
+  /*border: 1px solid #64a131;*/
+  /*border-radius: 5px;*/
+/*}*/
+

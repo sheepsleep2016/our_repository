@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>物品详情</title>
+  <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+  <link rel = "stylesheet" href = "/static/css/base.css">
+  <link rel = "stylesheet" href = "/static/css/shopping.css">
+  <link rel = "stylesheet" href = "/static/css/index.css" type = "text/css">
+  <link rel = "shortcut icon" href = "/static/image/图标.png">
+  <meta charset = "utf-8">
+  <script src = "/static/js/common.js"></script>
+  <script src = "/static/jquery/jquery-3.1.1.min.js"></script>
+  <script src = "/static/jquery/jquery.cookie.js"></script>
+  <script src = "/static/js/jquery-1.11.3.js"></script>
+  <script type="text/javascript">
+  var Dict = {{ list_comm|safe }};
+  </script>
+  <script src = "/static/js/shopping.js"></script>
+</head>
+<body>
+<div id = "container" >
+  <div id = "title">
+    <ul>
+      <li><a href = "/">欢乐GO首页</a></li>
+      {% if dict00.key %}
+        <li><span>Hi，</span></li>
+        <li style = "margin: 0" class = "last_line"><a href = "/personal">{{ dict00.user_name }}</a></li>
+        <li class = "last_line"><a href = "/loginout">退出</a></li>
+        <li style = "margin-left: 550px"><a href = "/personal">个人中心</a></li>
+        <li><a href = "/putaway">添加商品</a></li>
+      {% else %}
+        <li><a href = "/login">请登录</a></li>
+        <li class = "last_line"><a href = "/register">免费注册</a></li>
+        <li style = "margin-left: 550px"><a href = "/login">个人中心</a></li>
+        <li><a href = "/login">添加商品</a></li>
+      {% endif %}
+    </ul>
+  </div>
+  <div id = "header">
+    <span class = "menu">
+        <img src = "{{ user_avatar }}" width = "40px" height = "40px">
+        <ul class = menu_parent>
+            <li>
+{#                <a href = "" target = "_blank">用户名</a>#}
+                <p>{{ user_name }}</p>
+                <ol class = "menu_child">
+                  {% if gender == 0 %}
+                  <li>男</li>
+                  {% elif gender == 1 %}
+                  <li>女</li>
+                  {% else %}
+                  <li>保密</li>
+                  {% endif %}
+                  <li>注册日期：{{ useingdate }}</li>
+                  <li>已完成订单：{{ order_count }}单</li>
+                </ol>
+            </li>
+        </ul>
+    </span>
+    <span>商品浏览次数: 10</span>
+    <span style="width: 50%;">最近编辑：{{ commodity_date }}</span>
+  </div>
+  <div id = "box">
+    <div class = "main_01">
+      <p>
+        <span class = "shop_name" style="font: 30px '黑体';">{{ commodity_name }}</span>
+      </p>
+      <p>
+        <span class = "shop_price">价格:</span>
+        <span class = "shop_price_01">￥{{ commodity_price }}</span>
+      </p>
+      <p>
+        <span class = "shop_price">数量:</span>
+        <span class = "shop_price_01">{{ commodity_count }}</span>
+      </p>
+      <p>
+        <span class = "shop_address">所在地：</span>
+        <span class = "shop_address_01">{{ commodity_position }}</span>
+      </p>
+      <p>
+        <span class = "shop_address">联系方式：</span>
+        <span class = "shop_address_01">{{ phonenum }}</span>
+      </p>
+      <form name = "form1" action = "javascript:">
+        {% if dict00.key %}
+        <input type = "submit" name = "dianji_shop" id = "dianji_shop" value = "点击购买" onclick="buying()">
+        {% else %}
+        <input type = "submit" name = "dianji_shop" id = "dianji_shop" value = "点击购买" onclick="goaway()">
+        {% endif %}
+      </form>
+{#      <form name = "form2" method = "post" action = "">#}
+{#        <input type = "submit" name = "dianzan" id = "dianzan" value = "点赞">#}
+{#      </form>#}
+      <p></p>
+    </div>
+    <div id = "banner">
+      <p style="display: none" id="path">{{ path_photo }}</p>
+      {% for p in photo %}
+      <label style="display: none" class="pict">{{ p }}</label>
+      {% endfor %}
+      <p id="pic"><img src = "{{ full_path }}"></p>
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+      <a href = "javascript:void(0)" class = "left"></a>
+      <a href = "javascript:void(0)" class = "right"></a>
+    </div>
+    <div id="discrib">
+      <p>
+        <span class = "shop_discrib">宝贝介绍:</span>
+        <br>
+        <span class = "shop_discrib_01">{{ commodity_discrib }}</span>
+      </p>
+    </div>
+  </div>
+  <!-- 底部 -->
+  <div id = "font">
+    <div class = "form_last_line">
+      <span><a href = "/team">制作团队</a></span>
+      <span><a href = "/about">关于网站</a></span>
+      <span><a href = "/connecting">联系客服</a></span>
+    </div>
+  </div>
+</div>
+<script>
+  function goaway() {
+    alert("请先进行注册");
+    window.location.href="/login";
+  }
+  function buying() {
+    window.location.href="buying";
+  }
+</script>
+</body>
+</html>

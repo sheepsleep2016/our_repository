@@ -1,0 +1,5 @@
+body {
+  background-image:url('/static/image/big_exchange.jpg');
+  /*background: #E1FFFF;*/
+  background-size: cover;
+}
